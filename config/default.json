@@ -1,0 +1,5 @@
+{
+    "port": 5000,
+    "jwtSecret":"hNcOy4ftBwveDMit",
+    "mongoUri": "mongodb+srv://dotJ11R9LQEfaKpW:hNcOy4ftBwveDMit@clusternernlink.nxgcu73.mongodb.net/?retryWrites=true&w=majority"
+}

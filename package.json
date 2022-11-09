@@ -1,0 +1,31 @@
+{
+  "name": "link-mern",
+  "version": "1.0.0",
+  "description": "My First Mern Link",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "server": "nodemon app.js",
+   "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": [
+    "mern",
+    "react",
+    "nodejs"
+  ],
+  "author": "Maksymov Maksymov <dr.maksymov.maksym@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "config": "^3.3.8",
+    "express": "^4.18.2",
+    "express-validator": "^6.14.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.7.0"
+  },
+  "devDependencies": {
+    "concurrently": "^7.5.0",
+    "nodemon": "^2.0.20"
+  }
+}
