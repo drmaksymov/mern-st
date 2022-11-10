@@ -24,7 +24,6 @@ useEffect(()=> {
 },[id]);
   
 
-console.log();
 
   return (
     <div>

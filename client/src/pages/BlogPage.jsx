@@ -13,8 +13,8 @@ export const BlogPage = () => {
  useEffect(()=> {
    fetch(`https://bezpechni.com/wp-json/wp/v2/posts/`)
   .then(res => res.json())
-  .then(data => {setPosts(data);
-      }).catch(console.log("Error fetch"))
+  .then(data => {setPosts(data)
+      }).catch(console.log("Error fetch blog"))
  
     
  },[]);
