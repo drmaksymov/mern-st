@@ -1,7 +1,9 @@
 import React, {useState, useEffect } from "react"
-import { Link } from "react-router-dom";
+import { BlockBlog } from "../compMy/BlockBlog";
+//import { Link } from "react-router-dom";
 
-//import './App.css'
+
+import './../../src/'
 
 
 
@@ -20,16 +22,14 @@ export const BlogPage = () => {
  },[]);
     
   return (
-    <div>
+    <div className="">
        <h1>Blog Page</h1>
 
-       { posts.map(post => (
-          <Link key={post.id} to={`/blog/${post.id}`} >
-            <li>{post.title.rendered}</li>
-          </Link>
-        )
-
-        )
+       { posts.map(post =>  (
+          <BlockBlog  key={post.id} to={`/blog/${post.id}`} title={post.title.rendered} img={"sd"}>
+            
+          </BlockBlog> 
+                            ))
        }
     </div>
   )
