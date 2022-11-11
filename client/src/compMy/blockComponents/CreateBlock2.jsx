@@ -10,6 +10,7 @@ export const CreateBlock2 = ({onChange}) => {
     onChange(event.target.value)
   }  
 
+  
 
   return (
     <div>
