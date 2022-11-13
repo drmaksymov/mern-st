@@ -9,9 +9,9 @@ export const BlockBlog = (props) => {
     
     
   return (
-  <div className="">
+  <div className="w-1/3 sm:w-auto">
   <div key={props.key} className="">
-  <div className="flex flex-row md:flex-row md:max-w-xl rounded-lg bg-white shadow-lg">
+  <div className="flex md:flex-row md:max-w-xl rounded-lg bg-white shadow-lg">
     <img className=" w-full h-96 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg" src="https://mdbootstrap.com/wp-content/uploads/2020/06/vertical.jpg" alt="" />
     <div className="p-6 flex flex-col justify-start">
       <Link to={props.to} className="text-gray-900 text-xl font-medium mb-2">{props.title}</Link>

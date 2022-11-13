@@ -22,15 +22,18 @@ export const BlogPage = () => {
  },[]);
     
   return (
-    <div className="">
-       <h1>Blog Page</h1>
+    <>
+    <h1>Blog Page</h1>
+    <div className="flex flex-wrap gap-4 ">
+       
 
        { posts.map(post =>  (
-          <BlockBlog  key={post.id} to={`/blog/${post.id}`} title={post.title.rendered} img={"sd"}>
+          <BlockBlog  key={post.id} to={`/blog/${post.id}`} title={post.title.rendered} img={"sd"}/>
             
-          </BlockBlog> 
+         /*  </BlockBlog>  */
                             ))
        }
     </div>
+    </>
   )
 }
