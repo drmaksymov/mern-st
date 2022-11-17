@@ -33,7 +33,7 @@ export const AuthPage = () => {
   Hover me
 </button>
         </div>
-        <div style={{backgroundImage: `url(https://mdbootstrap.com/wp-content/uploads/2020/06/vertical.jpg)`}} className=" bg-no-repeat bg-cover  w-full sm:w-1/2 min-h-[300px] sm:min-h-[600px]          bg-slate-500 relative "  >
+        <div style={{backgroundImage: `url(https://mdbootstrap.com/wp-content/uploads/2020/06/vertical.jpg)`}} className=" bg-no-repeat bg-cover  w-full sm:w-1/2 min-h-[300px] sm:min-h-[600px]          bg-slate-500  "  >
         
                <div className="w-full h-full   bg-gradient-to-r from-slate-300   "></div>
           
