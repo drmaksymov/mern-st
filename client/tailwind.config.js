@@ -3,12 +3,13 @@ module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",],
   theme: {
-   
+    fontFamily: {
+      Nunito: "'Nunito', sans-serif;",
+      Russo: "'Russo One', sans-serif;",
+    },
     },
     extend: { 
-       fontFamily: {
-        Russo: "'Russo One', sans-serif;",
-      },
+       
   },
   plugins: ['@tailwindcss/forms',],
 }
