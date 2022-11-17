@@ -9,7 +9,7 @@ export const AuthPage = () => {
     
   return (
     <div>
-       <h1 className="font">Auth Paged</h1>
+      {/*  <h1 className="font">Auth Paged</h1> */}
        
       {/*  <div className="w-[500px] min-h-[500px] bg-slate-400 p-4 flex  flex-row-reverse items-center space-x-4">
         <div className=" bg-yellow-500 flex h-[80px] w-[80px]  text-white items-center justify-center">1</div>
