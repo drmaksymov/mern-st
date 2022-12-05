@@ -1,4 +1,6 @@
-import React from "react"
+import React, {useState, useRef, useEffect} from "react"
+import { DoctorHorizontalBlock } from "../compMy/blockComponents/DoctorHorizontalBlock"
+
 
 //import './App.css'
 
@@ -6,7 +8,11 @@ import React from "react"
 
 export const AuthPage = () => {
     
-    
+ 
+
+  /* console.log(carusel.current.AuthPage) */
+
+
   return (
     <div>
       {/*  <h1 className="font">Auth Paged</h1> */}
@@ -19,7 +25,7 @@ export const AuthPage = () => {
 
 
        <div className="min-h-[600px] bg-slate-300">
-         <div className="container mx-auto flex flex-col sm:flex-row">
+         <div className="container  flex flex-col sm:flex-row">
         <div className=" p-4 w-full sm:w-1/2 min-h-[350px] sm:min-h-[600px] justify-center flex items-center flex-col">
           <h1 className="font-Russo text-5xl text-orange-700 ">Довіра</h1>
          <h2 className="font-Russo text-2xl mt-5 ">Сучасна стоматологія  в Полтаві</h2>
@@ -41,6 +47,14 @@ export const AuthPage = () => {
             </div>
         </div>
        </div>
+
+
+
+       {/* Слайдер  */}
+
+       <DoctorHorizontalBlock/>
+
+
     </div>
   )
 }

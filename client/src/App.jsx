@@ -15,6 +15,8 @@ import { NoFound } from './pages/NoFound';
 import { Layout } from './compMy/Layout';
 import { BlogPage } from './pages/BlogPage';
 import { SinglePage } from './pages/SinglePage';
+import { DoctorSinglPage } from './pages/DoctorSinglPage';
+import { DoctorsAll } from './pages/DoctorsAll';
 
 
 
@@ -35,6 +37,8 @@ const App = () => {
         <Route path="detaile" element={<DetailPage/>} />
         <Route path="blog" element={<BlogPage/>} />
         <Route path="blog/:id" element={<SinglePage/>} />
+        <Route path="doctor/:id" element={<DoctorSinglPage/>}/>
+        <Route path="doctor" element={<DoctorsAll/>} />
         <Route path="*" element={<NoFound/>}/>
       </Route>
     </Routes>
