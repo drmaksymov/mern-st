@@ -1,8 +1,8 @@
 import React, {useState, useRef, useEffect} from "react"
 import { DoctorHorizontalBlock } from "../compMy/blockComponents/DoctorHorizontalBlock"
 
-
 //import './App.css'
+import { CallToActionHeader } from './../compMy/blockComponents/CallToActionHeader';
 
 
 
@@ -53,6 +53,7 @@ export const AuthPage = () => {
        {/* Слайдер  */}
 
        <DoctorHorizontalBlock/>
+       <CallToActionHeader/>
 
 
     </div>
