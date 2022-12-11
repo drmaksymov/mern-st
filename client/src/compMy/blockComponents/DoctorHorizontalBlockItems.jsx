@@ -1,6 +1,6 @@
-import React, {useState, useRef, useEffect} from "react"
+import React from "react"
 import {motion} from "framer-motion"
-import stomatolog from "./../../img/stomatolog.png"
+
 import { Link } from "react-router-dom"
 
 

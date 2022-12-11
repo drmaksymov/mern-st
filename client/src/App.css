@@ -24,7 +24,7 @@
 
 .image-doc {
     border-radius: 25% 26% 0% 25% / 0% 26% 25% 25%;
-    pointer-events: visiblePoint;
+   /*  pointer-events: visiblePoint; */
     object-fit: cover;
     
 }

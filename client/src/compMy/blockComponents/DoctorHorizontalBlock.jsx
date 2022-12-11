@@ -23,14 +23,16 @@ useEffect(() => {
 }, [])
 
   useEffect(() => {
-    setWidth(carusel.current.scrollWidth - carusel.current.offsetWidth)
+    console.log(carusel.current.scrollWidth)
+    setWidth(carusel.current.scrollWidth - carusel.current.offsetWidth);
   }, []);
 
     
   return (
-    <motion.div ref={carusel} className="carusel   h-[350px] flex items-center overflow-hidden mx-auto cursor-pointer" >
+    <motion.div ref={carusel} whileTap={{cursor:"grabbing"}} className="carusel   h-[350px] flex items-center overflow-hidden mx-auto cursor-pointer" >
     <motion.div drag="x" 
     dragConstraints={{right: 0, left: -width}}
+    
     className="carusel-inner h-[350px]   gap-4  flex  items-center p-4">
 
       

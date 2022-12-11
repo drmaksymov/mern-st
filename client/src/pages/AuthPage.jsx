@@ -3,6 +3,8 @@ import { DoctorHorizontalBlock } from "../compMy/blockComponents/DoctorHorizonta
 
 //import './App.css'
 import { CallToActionHeader } from './../compMy/blockComponents/CallToActionHeader';
+import { motion } from 'framer-motion';
+
 
 
 
