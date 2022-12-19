@@ -24,7 +24,8 @@
         "specialty": ["ортодонт", "терапевт"],
         "status": true,
         "education": "УМСА",
-        "WorkExperience": 1999
+        "WorkExperience": 1999,
+        "category": ["ortodont", "therapy"]
 
       },
 
@@ -36,10 +37,11 @@
         "name": "Віктор Дивиденко",
         "imgdoc":"https://dent-art.com.ua/templates/images/tree/4f849789185ce7dd087dcd9bcdf059f2_1655452479.jpg",
         "description":"Лікар-найкраща П. Чехов, - це подвиг. «Вона вимагає чистоти душі і помислів. Треба бути ясним розумово, чистим морально і охайним фізично ». Лікар повинен завжди бути добрим і милосердним, тому що справа, якою він займається, полегшує страждання хворого і рятує його від смерті. До лікарів люди ставляться завжди особливо, вони їх цінують і поважають. У руках лікаря перебуває людське життя. Легше стати лікарем, ніж бути ним. Лікар - це не просто професіонал, це творець.Зрозуміло, потрібні всі професії, вони мають рівномірно і доцільно розподіляться в суспільстві.",
-        "specialty": ["ортодонт", "терапевт"],
+        "specialty": ["ортодонт", "хірург"],
         "status": true,
         "education": "УМСА",
-        "WorkExperience": 2015
+        "WorkExperience": 2015,
+        "category": ["ortodont", "surgery"]
 
       },
 
@@ -54,7 +56,8 @@
         "specialty": ["ортодонт", "терапевт"],
         "status": true,
         "education": "УМСА",
-        "WorkExperience": 2015
+        "WorkExperience": 2015,
+        "category": ["ortodont", "therapy"]
 
       },
 
@@ -69,7 +72,8 @@
         "specialty": ["ортодонт", "терапевт"],
         "status": true,
         "education": "УМСА",
-        "WorkExperience": 2015
+        "WorkExperience": 2015,
+        "category": ["ortodont", "therapy"]
 
       },
       {
@@ -82,7 +86,8 @@
         "specialty": ["ортодонт", "терапевт"],
         "status": true,
         "education": "УМСА",
-        "WorkExperience": 2015
+        "WorkExperience": 2015,
+        "category": ["ortodont", "therapy"]
 
       }
 
@@ -106,6 +111,31 @@
       "id": 4 ,
         "header": "Найефективніше знеболення 2022 року"
     }
+
+
+    ],
+
+
+
+    "service": [ 
+      {
+      "id": 1,
+      "title": "Ортодонтія",
+      "slug":"ortodont",
+      "description": "Note: there are known issues in versions before 15.5.7 so",
+      "imgServ": "http://localhost:3000/img/ServiseStomat.png",
+      "imgMain": "http://localhost:3000/img/stomatmain2.jpg"
+    }, 
+    {
+      "id": 2,
+      "title": "Хірургія",
+      "slug":"surgery",
+      "description": "Лікуванням дефектів розвитку зубів та щелепно-лицьового кістяка",
+      "imgServ": "http://localhost:3000/img/ServiseStomat.png",
+      "imgMain": "http://localhost:3000/img/stomatmain2.jpg"
+    }
+
+
 
 
     ]

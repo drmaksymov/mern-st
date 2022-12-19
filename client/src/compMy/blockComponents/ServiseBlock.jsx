@@ -1,99 +1,43 @@
-import React from "react"
-import ServiceImg from "./../../img/ServiseStomat.png" 
+import React, {useEffect, useState} from "react"
+
 /* import './../styleModule/ServiswBlock.module.css'; */
 import { CiCircleChevRight } from "react-icons/ci";
+import { Link } from 'react-router-dom';
 
-export const ServiseBlock = () => {
-    
-    
+
+export const ServiseBlock = (props) => {
+
+    const [service, setService] = useState([])
+
+    const URL_SERVICE = "http://localhost:3001/service"
+
+    useEffect( () => {
+        fetch(URL_SERVICE)
+        .then(res => res.json())
+        .then(data => setService(data))
+        .catch(console.log("Error Service"))
+    }, [])
+
+   
+
+
   return (
-    <div className="ServiseBlock min-h-[400px] pb-10 bg-gray-100 flex item-center center pt-4 flex-col items-center">
-        <h3 className="text-slate-600 text-3xl font-Russo ">ServiseBlock</h3>
+    <div >
+        
               <div className=" flex gap-4 flex-wrap justify-center mt-10 ">
               
               
-               <div  className="ServiseBlockitem h-[100px] w-[300px] bg-slate-200 rounded-xl flex items-center justify-between pl-4 pr-4 gap-4">
-                    <img src={ServiceImg} className="h-[60px] w-[60px]" />
-                    <div className="">
-                        <p>Ортодонтія</p>
-                        
-                </div>
-                <CiCircleChevRight  size= '2em' color='#737476'/> 
+               {service?.map(services =>(
+                        <div  className="ServiseBlockitem h-[120px] w-[350px] bg-slate-200 rounded-xl flex items-center justify-between pl-4 pr-4 gap-4">
+                        <img src={services.imgServ} className="h-[60px] w-[60px]" />
+                        <Link to={`/service/${services.id}` || `/service/${props.to}`} > <div className="">
+                            <p className="text-[16px]">{services.title}</p>
+                            <p className="text-[14px]"> {services.description}</p>
+                    </div></Link>
+                    <CiCircleChevRight  size= '4em' color='#737476'/> 
+                   </div>
+               ) )}
                </div>
-
-               
-               <div  className="ServiseBlockitem h-[100px] w-[300px] bg-slate-200 rounded-xl flex items-center justify-between pl-4 pr-4 gap-4">
-                    <img src={ServiceImg} className="h-[60px] w-[60px]" />
-                    <div className="">
-                        <p>Ортодонтія</p>
-                        <p className="text-[10px]"> лікуванням дефектів розвитку зубів та щелепно-лицьового кістяка</p>
-                </div>
-                <CiCircleChevRight  size= '4em' color='#737476'/> 
-               </div>
-                <div  className="ServiseBlockitem h-[100px] w-[300px] bg-slate-200 rounded-xl flex items-center justify-between pl-4 pr-4 gap-4">
-                    <img src={ServiceImg} className="h-[60px] w-[60px]" />
-                    <div className="">
-                        <p>Ортодонтія</p>
-                        <p>Ортодонтія</p>
-                </div>
-                <CiCircleChevRight  size= '2em' color='#737476'/> 
-               </div>
-
-
-               <div  className="ServiseBlockitem h-[100px] w-[300px] bg-slate-200 rounded-xl flex items-center justify-between pl-4 pr-4 gap-4">
-                    <img src={ServiceImg} className="h-[60px] w-[60px]" />
-                    <div className="">
-                        <p>Ортодонтія</p>
-                        <p>Ортодонтія</p>
-                </div>
-                <CiCircleChevRight  size= '2em' color='#737476'/> 
-               </div>
-
-
-               <div  className="ServiseBlockitem h-[100px] w-[300px] bg-slate-200 rounded-xl flex items-center justify-between pl-4 pr-4 gap-4">
-                    <img src={ServiceImg} className="h-[60px] w-[60px]" />
-                    <div className="">
-                        <p>Ортодонтія</p>
-                        <p>Ортодонтія</p>
-                </div>
-                <CiCircleChevRight  size= '2em' color='#737476'/> 
-               </div>
-               <div  className="ServiseBlockitem h-[100px] w-[300px] bg-slate-200 rounded-xl flex items-center justify-between pl-4 pr-4 gap-4">
-                    <img src={ServiceImg} className="h-[60px] w-[60px]" />
-                    <div className="">
-                        <p>Ортодонтія</p>
-                        <p>Ортодонтія</p>
-                </div>
-                <CiCircleChevRight  size= '2em' color='#737476'/> 
-               </div>
-
-               <div  className="ServiseBlockitem h-[100px] w-[300px] bg-slate-200 rounded-xl flex items-center justify-between pl-4 pr-4 gap-4">
-                    <img src={ServiceImg} className="h-[60px] w-[60px]" />
-                    <div className="">
-                        <p>Ортодонтія</p>
-                        <p>Ортодонтія</p>
-                </div>
-                <CiCircleChevRight  size= '2em' color='#737476'/> 
-               </div>
-
-               <div  className="ServiseBlockitem h-[100px] w-[300px] bg-slate-200 rounded-xl flex items-center justify-between pl-4 pr-4 gap-4">
-                    <img src={ServiceImg} className="h-[60px] w-[60px]" />
-                    <div className="">
-                        <p>Ортодонтія</p>
-                        <p>Ортодонтія</p>
-                </div>
-                <CiCircleChevRight  size= '2em' color='#737476'/> 
-               </div>
-               <div  className="ServiseBlockitem h-[100px] w-[300px] bg-slate-200 rounded-xl flex items-center justify-between pl-4 pr-4 gap-4">
-                    <img src={ServiceImg} className="h-[60px] w-[60px]" />
-                    <div className="">
-                        <p>Ортодонтія</p>
-                        <p>Ортодонтія</p>
-                </div>
-                <CiCircleChevRight  size= '2em' color='#737476'/> 
-               </div>
-               
-              </div>
     </div>
   )
 }

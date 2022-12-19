@@ -17,6 +17,8 @@ import { BlogPage } from './pages/BlogPage';
 import { SinglePage } from './pages/SinglePage';
 import { DoctorSinglPage } from './pages/DoctorSinglPage';
 import { DoctorsAll } from './pages/DoctorsAll';
+import { Service } from './pages/Service';
+import { ServiceSingle } from './pages/ServiceSingle';
 
 
 
@@ -39,6 +41,8 @@ const App = () => {
         <Route path="blog/:id" element={<SinglePage/>} />
         <Route path="doctor/:id" element={<DoctorSinglPage/>}/>
         <Route path="doctor" element={<DoctorsAll/>} />
+        <Route path="service" element={<Service/>}/>
+        <Route path="service/:id" element={<ServiceSingle/>}/>
         <Route path="*" element={<NoFound/>}/>
       </Route>
     </Routes>

@@ -47,27 +47,47 @@ export const Menu = () => {
           to="/create"
           className={({isActive}) => isActive? 'block h-16 border-b-4 border-transparent leading-[4rem] border-current text-red-700': 'block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-red-700'}
         >
-          Create Link
+          Головна
         </NavLink>
 
         <NavLink
-          to="/links"
+          to="/service"
           className={({isActive}) => isActive? 'block h-16 border-b-4 border-transparent leading-[4rem] border-current text-red-700': 'block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-red-700'}
         >
-          My Link
+          Сервіс
         </NavLink>
 
         <NavLink 
           to="/detaile" className={({isActive}) => isActive? 'block h-16 border-b-4 border-transparent leading-[4rem] border-current text-red-700': 'block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-red-700'}  
           
         >
-          Detaile
+         Лікарі
         </NavLink>
         <NavLink 
           to="/blog" className={({isActive}) => isActive? 'block h-16 border-b-4 border-transparent leading-[4rem] border-current text-red-700': 'block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-red-700'}  
           
         >
-          Blog
+          Наші роботи
+        </NavLink>
+
+        <NavLink 
+          to="/blog" className={({isActive}) => isActive? 'block h-16 border-b-4 border-transparent leading-[4rem] border-current text-red-700': 'block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-red-700'}  
+          
+        >
+          Ціни
+        </NavLink>
+
+        <NavLink 
+          to="/blog" className={({isActive}) => isActive? 'block h-16 border-b-4 border-transparent leading-[4rem] border-current text-red-700': 'block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-red-700'}  
+          
+        >
+          Блог
+        </NavLink>
+        <NavLink 
+          to="/blog" className={({isActive}) => isActive? 'block h-16 border-b-4 border-transparent leading-[4rem] border-current text-red-700': 'block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-red-700'}  
+          
+        >
+          Контакти
         </NavLink>
 
         
