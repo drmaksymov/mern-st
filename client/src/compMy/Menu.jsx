@@ -57,21 +57,27 @@ export const Menu = () => {
           Сервіс
         </NavLink>
 
+
+
         <NavLink 
-          to="/detaile" className={({isActive}) => isActive? 'block h-16 border-b-4 border-transparent leading-[4rem] border-current text-red-700': 'block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-red-700'}  
+          to="/doctor" className={({isActive}) => isActive? 'block h-16 border-b-4 border-transparent leading-[4rem] border-current text-red-700': 'block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-red-700'}  
           
         >
          Лікарі
         </NavLink>
+
+        
+
+
         <NavLink 
-          to="/blog" className={({isActive}) => isActive? 'block h-16 border-b-4 border-transparent leading-[4rem] border-current text-red-700': 'block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-red-700'}  
+          to="/case" className={({isActive}) => isActive? 'block h-16 border-b-4 border-transparent leading-[4rem] border-current text-red-700': 'block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-red-700'}  
           
         >
           Наші роботи
         </NavLink>
 
         <NavLink 
-          to="/blog" className={({isActive}) => isActive? 'block h-16 border-b-4 border-transparent leading-[4rem] border-current text-red-700': 'block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-red-700'}  
+          to="/price" className={({isActive}) => isActive? 'block h-16 border-b-4 border-transparent leading-[4rem] border-current text-red-700': 'block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-red-700'}  
           
         >
           Ціни
@@ -84,7 +90,7 @@ export const Menu = () => {
           Блог
         </NavLink>
         <NavLink 
-          to="/blog" className={({isActive}) => isActive? 'block h-16 border-b-4 border-transparent leading-[4rem] border-current text-red-700': 'block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-red-700'}  
+          to="/contact" className={({isActive}) => isActive? 'block h-16 border-b-4 border-transparent leading-[4rem] border-current text-red-700': 'block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-red-700'}  
           
         >
           Контакти

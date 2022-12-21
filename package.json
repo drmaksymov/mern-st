@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "My First Mern Link",
   "main": "app.js",
+  "type":"module",
   "scripts": {
     "start": "node app.js",
     "server": "nodemon app.js",
