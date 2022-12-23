@@ -30,7 +30,7 @@ export const create = async (req, res) => {
 export const getAll = async (req, res) => {
     try {
 
-        const posts =  await PostModel.find().populate('user').exec();
+        const posts =  await PostModel.find({}).populate('user').exec();
 
 
        /* const [title, ...postsData] = posts; */
@@ -79,7 +79,32 @@ export const getOne = async (req, res) => {
 
     } catch (err) {
         console.log(err)
-        res.status(500).json({message:"Статті не знайдені"});
+        res.status(500).json({message:"Стаgт ті vgне знайдені"});
     }
 };
 
+
+export const remove = async (req, res) => {
+    try {
+
+        const postId = req.params.id
+
+         PostModel.findOneAndDelete({
+            _id: postId
+        }
+        
+        )
+        
+
+
+       /* const [title, ...postsData] = posts; */
+
+       /* console.log(user) */
+
+        res.status(200).json({message: "Посdавіт видалено"})
+
+    } catch (err) {
+        console.log(err)
+        res.status(500).json({message:"Стdаттdsі не знайдені"});
+    }
+};
