@@ -87,11 +87,22 @@ export const getOne = async (req, res) => {
 export const remove = async (req, res) => {
     try {
 
-        const postId = req.params.id
+        const postId = req.params.id;
 
          PostModel.findOneAndDelete({
             _id: postId
+        }, (err, doc) => {
+            if(err) {
+               return res.status(500).json({message: "Щось пішло не так"})
+            }
+
+            if(!doc) {
+                return res.status(404).json({message: "Таgкого документу не знайдено"})
+            }
+            res.status(200).json({message: "Посdавіт видиалено"})
         }
+
+       
         
         )
         
@@ -101,7 +112,52 @@ export const remove = async (req, res) => {
 
        /* console.log(user) */
 
-        res.status(200).json({message: "Посdавіт видалено"})
+       
+
+    } catch (err) {
+        console.log(err)
+        res.status(500).json({message:"Стdаттdsі не знайдені"});
+    }
+};
+
+
+
+export const update = async (req, res) => {
+    try {
+
+        const postId = req.params.id;
+
+        PostModel.findByIdAndUpdate({
+            _id: postId
+        }, {
+            title: req.body.title,
+            text: req.body.text,
+        }, {
+            returnDocument: "after"
+        }, 
+        
+        (err, doc) => {
+            if(err) {
+               return res.status(500).json({message: "Щоfсь пішло не так"})
+            }
+
+            if(!doc) {
+                return res.status(404).json({message: "Таgкого доfdкументу не знайдено"})
+            }
+            res.status(200).json(doc)
+        }
+
+       
+        
+        )
+        
+
+
+       /* const [title, ...postsData] = posts; */
+
+       /* console.log(user) */
+
+       
 
     } catch (err) {
         console.log(err)

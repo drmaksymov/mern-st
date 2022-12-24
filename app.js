@@ -28,7 +28,7 @@ app.post('/posts', checkAuth, postCreaterValidation, PostController.create )
 app.get('/posts/:id', PostController.getOne)
 app.get('/posts', PostController.getAll)
 app.delete('/posts/:id', PostController.remove)
-/* app.patch('/posts/:id', PostController.update)  */
+app.patch('/posts/:id', PostController.update) 
 
 
 
