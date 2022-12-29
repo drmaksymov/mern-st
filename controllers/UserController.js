@@ -24,6 +24,7 @@ export const register = async (req, res) => {
         const doc = new UserModel({
             email: req.body.email,
             passwordHash: hash,
+            roles: req.body.roles, 
             fullName: req.body.fullName,
             avatarUrl: req.body.avatarUrl,
     
@@ -35,6 +36,7 @@ export const register = async (req, res) => {
         const token = jwt.sign(
             {
                 _id:user._id,
+                roles:user.roles,
             },
             'myCot86',
             {
@@ -74,6 +76,7 @@ export const login = async(req, res) => {
             const token =jwt.sign(
                 {
                     _id:user._id,
+                   
                 },
                 'myCot86',
                 {

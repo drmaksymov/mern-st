@@ -164,3 +164,42 @@ export const update = async (req, res) => {
         res.status(500).json({message:"Стdаттdsі не знайдені"});
     }
 };
+
+
+export const getTags = async (req, res) => {
+    try {
+
+        const tags =  await PostModel.distinct("tags");
+
+
+       /* const [title, ...postsData] = posts; */
+
+       /* console.log(user) */
+
+        res.status(200).json(tags)
+
+    } catch (err) {
+        console.log(err)
+        res.status(500).json({message:"Стdаттdsі не знайдені"});
+    }
+};
+
+
+export const getOneTag = async (req, res) => {
+    try {
+
+        const tag = req.params.tag;
+        const tags =  await PostModel.find({tags: tag});
+
+
+       /* const [title, ...postsData] = posts; */
+
+       /* console.log(user) */
+
+        res.status(200).json(tags)
+
+    } catch (err) {
+        console.log(err)
+        res.status(500).json({message:"Стdаттdsі не знайдені"});
+    }
+};

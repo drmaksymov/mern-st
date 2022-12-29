@@ -6,6 +6,8 @@ import * as UserController from './controllers/UserController.js';
 import * as PostController from './controllers/PostController.js';
 
 import checkAuth from './utils/checkAuth.js';
+import RoleAuth from './utils/RoleAuth.js';
+
 
 
 /* CONSTANT */
@@ -24,9 +26,11 @@ app.get('/auth/me', checkAuth, UserController.getMe)
 
 
 /* POSTS */
-app.post('/posts', checkAuth, postCreaterValidation, PostController.create )
-app.get('/posts/:id', PostController.getOne)
+app.post('/posts',  RoleAuth, postCreaterValidation, PostController.create )
+app.get('/posts/:id', RoleAuth, PostController.getOne)
 app.get('/posts', PostController.getAll)
+app.get('/tags', PostController.getTags)
+app.get('/tags/:tag', PostController.getOneTag)
 app.delete('/posts/:id', PostController.remove)
 app.patch('/posts/:id', PostController.update) 
 
