@@ -192,10 +192,6 @@ export const getOneTag = async (req, res) => {
         const tags =  await PostModel.find({tags: tag});
 
 
-       /* const [title, ...postsData] = posts; */
-
-       /* console.log(user) */
-
         res.status(200).json(tags)
 
     } catch (err) {

@@ -12,14 +12,12 @@ export default (req, res, next) => {
                 req.userId = decoded._id;
                 req.Roles = decoded.roles;
                
-                 if(req.Roles === "user") {
-                  return  res.status(401).json({
-                        message: "Ви не маєте  доступа до цієї функції"
-                });
+                 if(req.Roles === "admin") {
+                  return   next();    
                 
                 
-                } 
-                next();   
+                } res.redirect('/login')
+               
                 
                 
              
@@ -36,10 +34,10 @@ export default (req, res, next) => {
     
 
 } else {
-    res.status(403).json({
+   /*  res.status(403).json({
         message: "Ви не зарреєстровані"
-    });
-
+    }); */
+    res.redirect('https://bezpechni.com/')
 }
 
 

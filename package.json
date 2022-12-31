@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "My First Mern Link",
   "main": "app.js",
-  "type":"module",
+  "type": "module",
   "scripts": {
     "start": "node app.js",
     "server": "nodemon app.js",
@@ -25,7 +25,8 @@
     "express": "^4.18.2",
     "express-validator": "^6.14.2",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.7.0"
+    "mongoose": "^6.7.0",
+    "mongoose-slug-generator": "^1.0.4"
   },
   "devDependencies": {
     "concurrently": "^7.5.0",
